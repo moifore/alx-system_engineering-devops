@@ -1,2 +1,2 @@
-#!/bin/sh
-echo "Current working directory is 'pwd'"
+#!/bin/bash\n
+echo "Current working directory is `pwd`"
