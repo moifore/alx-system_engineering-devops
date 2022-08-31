@@ -1,2 +1,2 @@
 #!/bin/bash\n
-echo $("ls")
+echo "$(ls -1)"
