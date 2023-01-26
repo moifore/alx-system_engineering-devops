@@ -5,5 +5,5 @@ LIMIT=10
 
 for (( i=0; i<LIMIT; i++ ))
 do
-	echo "Best School"
+ echo "Best School"
 done
