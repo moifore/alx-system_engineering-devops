@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Prints "Best School' 10 times using the until loop
+@idx: index
+
+idx=0
+
+until [ $idx -eq 10 ]
+do
+echo "Best School"
+((idx++))
+done
