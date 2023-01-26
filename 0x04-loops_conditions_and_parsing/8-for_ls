@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Prints the content of the current directory in a list format
+# prints part of the list after the first dash
+
+list=(ls)
+for i in $list; do
+echo "$i" | cut -d '-' -f2
+done
