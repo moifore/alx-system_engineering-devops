@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Prints "Best School' 10 times using the until loop
-@idx: index
+# @idx: index
 
 idx=0
 
