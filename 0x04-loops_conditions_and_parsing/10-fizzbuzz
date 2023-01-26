@@ -3,20 +3,20 @@
 # Multiple of 3 prints 'Fizz'
 # Multiple of 5 prints 'Buzz'
 # Multiple of 3 and 5 prints 'FizzBuzz'
-# Otherwise displays the number
+# Otherwise displays the the number
 
 for num in {1..100}
 do
-if (( num % 3 == 0 ))
-then
-echo "Fizz"
-elif (( num % 5 == 0 ))
-then
-echo "Buzz"
-elif (( num % 3 == 0 && num % 5 == 0 ))
-then
-echo "FizzBuzz"
-else
-echo "$num"
-fi
+	if (( num % 3 == 0 && num % 5 == 0 ))
+		then
+			echo "FizzBuzz"
+	elif (( num % 3 == 0 ))
+		then
+			echo "Fizz"
+	elif (( num % 5 == 0 ))
+		then
+			echo "Buzz"
+	else
+		echo "$num"
+	fi
 done
