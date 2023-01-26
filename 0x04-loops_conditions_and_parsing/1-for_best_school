@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Prints 'Best School' 10 times
 
-LIMIT = 10
+LIMIT=10
 
 for (( i=0; i<LIMIT; i++ ))
 do
