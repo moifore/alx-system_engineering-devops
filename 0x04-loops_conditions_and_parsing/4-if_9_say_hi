@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Prints 'Best School'. Prints 'Hi' on 9th iteration
+# @idx: index
+
+idx=0
+
+while [ $idx -lt 10 ]
+do
+if [ $idx -eq 9 ]
+then
+echo "Hi"
+fi
+echo "Best School"
+(( idx++ ))
+done
