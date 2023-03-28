@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#start apache2 inside docker
+service apaceh2 start#!/usr/bin/env bash
+#start apache2 inside docker
+service apaceh2 start
