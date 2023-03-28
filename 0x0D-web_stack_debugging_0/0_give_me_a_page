@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-#start apache2 on alx server (Ubuntu 14.04 - 265)
-
-echo "ServerName localhost" >> /etc/apache2.conf
-sudo service apache2 start
