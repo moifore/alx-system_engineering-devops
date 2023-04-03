@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# clone web-01 config setup to web-02
+# 'X-Served-By' as custom HTTP header
+# custom HTTP header must be the hostname of the server Nginx is running on
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
+
+sudo mkdir -p /var/www/html /var/www/error
+sudo chmod -R 755 /var/www
+
+echo 'Hello World!' > /var/www/html/index.html
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+
+server_config=\
+"server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+        root /var/www/html;
+        index index.html index.htm index.nginx-debain.html;
+        server_name _;
+        add_header X-Served-By \$hostname;
+        location / {
+                try_files \$uri \$uri/ =404;
+        }
+        error_page 404 / 404.html;
+        location = /404.html {
+                internal;
+        }
+}"
+
+echo "$server_config" > /etc/nginx/sites_enabled/default
+sudo service nginx restart
