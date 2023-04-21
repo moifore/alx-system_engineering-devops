@@ -35,13 +35,13 @@ log-error	= /var/log/mysql/error.log
 #bind-address	= 127.0.0.1
 
 # Replica Server Setting
-server-id = 2
+server-id 	= 2
 
 # Disabling symbolic-links is recommended to prevent assorted security risks
-symbolic-links=0
+symbolic-links	=0
 
 # setting the base name and location of mysql binary log file
-log_bin = /var/log/mysql/mysql-bin.log
+log_bin 	= /var/log/mysql/mysql-bin.log
 
 # name of database to replicate
 binlog_do_db	= tyrell_corp
