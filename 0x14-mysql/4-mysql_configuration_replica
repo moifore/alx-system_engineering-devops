@@ -43,8 +43,8 @@ symbolic-links	=0
 # setting the base name and location of mysql binary log file
 log_bin 	= /var/log/mysql/mysql-bin.log
 
+# Relay Database settings
+relay-log = /var/log/mysql/mysql-relay-bin.log
+
 # name of database to replicate
 binlog_do_db	= tyrell_corp
-
-# Relay database replica
-relay-log = /var/log/mysql/mysql-relay-bin.log
